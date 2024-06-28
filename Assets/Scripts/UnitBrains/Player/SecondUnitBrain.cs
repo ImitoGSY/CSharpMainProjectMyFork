@@ -17,7 +17,6 @@ namespace UnitBrains.Player
         {
             float overheatTemperature = OverheatTemperature;
             float t = GetTemperature();
-            IncreaseTemperature();
             if (t >= overheatTemperature)
             {
                 return;
@@ -28,6 +27,8 @@ namespace UnitBrains.Player
                 var projectile = CreateProjectile(forTarget);
                 AddProjectileToList(projectile, intoList);
             }
+            IncreaseTemperature();
+
         }
 
 
